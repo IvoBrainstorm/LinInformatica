@@ -15,6 +15,8 @@ public class ClasseExecutavel {
         ContaCorrente corrente = new ContaCorrente();
         ContaPoupanca poupanca = new ContaPoupanca();
         
+        Relatorio relatorio = new Relatorio();
+        
         poupanca.depositar(1000);
         poupanca.setLimite(200);
         
@@ -22,6 +24,8 @@ public class ClasseExecutavel {
         
         corrente.depositar(4500);
         corrente.sacar(456);
+        
+        relatorio.gerarRelatorio(poupanca);
         
     }
 }

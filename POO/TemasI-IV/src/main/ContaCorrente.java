@@ -13,13 +13,14 @@ package main;
  * 
  * @author brainstorm
  */
-public class ContaCorrente extends ContaBancaria {
+public class ContaCorrente extends ContaBancaria implements MostrarDados{
     /**
      * metodos associaods a conta corrente
      * é descontado sempre que um levantamento e um
      * depósito são feitos
      */
     private double taxaDeOperacao;
+    
     
     /**
      * Constructor que inicializa os atrbutos da classe e da superclasse
@@ -69,6 +70,12 @@ public class ContaCorrente extends ContaBancaria {
     @Override
     public void depositar(double deposito) {
         super.setSaldo(getSaldo() + deposito - getTaxaDeOperacao());
+    }
+
+    @Override
+    public void mostrarDados() {
+        System.out.println("O numero de conta eh: "+getNumConta()
+            +"\n O Saldo actual eh de: "+getSaldo());
     }
     
 }

@@ -19,7 +19,7 @@ public class Relatorio {
      * com parametro
      * @param mostrar 
      */
-    public static void gerarRelatorio(MostrarDados mostrar){
+    public void gerarRelatorio(MostrarDados mostrar){
         mostrar.mostrarDados();
     }
 }

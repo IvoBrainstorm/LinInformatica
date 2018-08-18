@@ -13,7 +13,7 @@ package main;
  * 
  * @author brainstorm
  */
-public class ContaPoupanca extends ContaBancaria {
+public class ContaPoupanca extends ContaBancaria implements MostrarDados {
     /**
      * metodos associaods a conta poupanca
      * dá credito a mais para o correntista caso ele precise
@@ -55,7 +55,6 @@ public class ContaPoupanca extends ContaBancaria {
      */
     @Override
     public void sacar(double saque) {
-        
         double limite = getSaldo()-saque;
         
         if(limite >= getLimite()){
@@ -74,6 +73,12 @@ public class ContaPoupanca extends ContaBancaria {
     public void depositar(double deposito) {
         super.setSaldo(getSaldo() + deposito);
 
+    }
+
+    @Override
+    public void mostrarDados() {
+        System.out.println("O numero de conta eh: "+getNumConta()
+            +"\n O Saldo actual eh de: "+getSaldo());
     }
     
 }
