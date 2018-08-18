@@ -16,6 +16,10 @@ package main;
 public class ContaPoupanca extends ContaBancaria {
     /**
      * metodos associaods a conta poupanca
+     * dá credito a mais para o correntista caso ele precise
+     * levantar mais que o saldo
+     * 
+     * o saldo pode ficar negativo desde que não ultrapasse o limite
      */
     private double limite;
 

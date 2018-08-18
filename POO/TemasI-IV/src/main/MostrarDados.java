@@ -16,7 +16,7 @@ package main;
 public interface MostrarDados {
     
     /**
-     * metodo que fara a impressao de dados
+     * na implementação do método mostrara os atributos de cada conta
      */
     public void mostrarDados();
 }

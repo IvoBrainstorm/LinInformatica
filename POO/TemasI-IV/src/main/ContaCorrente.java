@@ -16,6 +16,8 @@ package main;
 public class ContaCorrente extends ContaBancaria {
     /**
      * metodos associaods a conta corrente
+     * é descontado sempre que um levantamento e um
+     * depósito são feitos
      */
     private double taxaDeOperacao;
 
@@ -33,6 +35,7 @@ public class ContaCorrente extends ContaBancaria {
      * metodo que realiza o deposito
      * com paramentro: 
      * @param deposito 
+     * 
      */
     @Override
     public void depositar(double deposito) {
