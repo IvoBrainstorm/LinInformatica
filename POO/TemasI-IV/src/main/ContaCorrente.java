@@ -20,7 +20,32 @@ public class ContaCorrente extends ContaBancaria {
      * depósito são feitos
      */
     private double taxaDeOperacao;
+    
+    /**
+     * Constructor que inicializa os atrbutos da classe e da superclasse
+     * @param taxaDeOperacao
+     * @param numConta
+     * @param saldo
+     * @param historico 
+     */
 
+    public ContaCorrente(double taxaDeOperacao, int numConta, double saldo, String historico) {
+        super(numConta, saldo, historico);
+        this.taxaDeOperacao = taxaDeOperacao;
+    }
+
+    public ContaCorrente() {
+    }
+    
+    
+    public double getTaxaDeOperacao() {
+        return taxaDeOperacao;
+    }
+
+    public void setTaxaDeOperacao(double taxaDeOperacao) {
+        this.taxaDeOperacao = taxaDeOperacao;
+    }
+    
     /**
      * metodo que realiza o levantamento
      * com paramentro: 
@@ -28,7 +53,11 @@ public class ContaCorrente extends ContaBancaria {
      */
     @Override
     public void sacar(double saque) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       double limite = getSaldo()-(saque+getTaxaDeOperacao());
+       if(limite >= 0){
+           super.setSaldo(limite);
+       }
+       
     }
 
     /**
@@ -39,7 +68,7 @@ public class ContaCorrente extends ContaBancaria {
      */
     @Override
     public void depositar(double deposito) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        super.setSaldo(getSaldo() + deposito - getTaxaDeOperacao());
     }
     
 }

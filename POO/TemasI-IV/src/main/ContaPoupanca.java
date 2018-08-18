@@ -23,6 +23,30 @@ public class ContaPoupanca extends ContaBancaria {
      */
     private double limite;
 
+    /**
+     * Constructor que inializa os atributos da classe e da classe herdada
+     * @param limite
+     * @param numConta
+     * @param saldo
+     * @param historico 
+     */
+    public ContaPoupanca(double limite, int numConta, double saldo, String historico) {
+        super(numConta, saldo, historico);
+        this.limite = limite;
+    }
+
+    public ContaPoupanca() {
+    }
+
+    
+    public double getLimite() {
+        return -limite;
+    }
+
+    public void setLimite(double limite) {
+        this.limite = limite;
+    }
+    
     
     /**
      * metodo que realiza o levantamento
@@ -31,7 +55,12 @@ public class ContaPoupanca extends ContaBancaria {
      */
     @Override
     public void sacar(double saque) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        double limite = getSaldo()-saque;
+        
+        if(limite >= getLimite()){
+            super.setSaldo(getSaldo()-saque);
+        }
     }
     
     
@@ -43,7 +72,8 @@ public class ContaPoupanca extends ContaBancaria {
 
     @Override
     public void depositar(double deposito) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        super.setSaldo(getSaldo() + deposito);
+
     }
     
 }
