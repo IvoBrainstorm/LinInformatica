@@ -84,12 +84,8 @@ public abstract class ContaBancaria {
     
     public void transferir(double valor, ContaBancaria conta){
         
-        if(conta instanceof ContaCorrente){
-            
-        }
-        if(conta instanceof ContaPoupanca){
-            
-        }
+        this.sacar(valor);
+        conta.depositar(valor);
         
         
     }
