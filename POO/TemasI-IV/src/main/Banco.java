@@ -6,6 +6,7 @@
 package main;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,10 +18,12 @@ public class Banco implements MostrarDados{
     
     public void inserir(ContaBancaria conta){
         contas.add(conta);
+        JOptionPane.showMessageDialog(null, "Conta criada com sucesso...");
     }
     
     public void remover(ContaBancaria conta){
         contas.remove(conta);
+        JOptionPane.showMessageDialog(null, "Conta removida com sucesso...");
     }
     
     public ContaBancaria procurarConta(int numeroConta){
@@ -36,7 +39,4 @@ public class Banco implements MostrarDados{
     public void mostrarDados() {
         contas.toString();
     }
-    
-    
-    
 }
