@@ -82,32 +82,35 @@ public class Testes {
         public static void gerarRealatorio(Banco banco){
             
         }
-        public static void finalizar(){
-            int num = Integer.parseInt(JOptionPane.showInputDialog("[1] Para sair \n [2] Menu"));
-            if (num == 1){
-                System.exit(0);
-            } else if(num == 2){
-                menu();
-            }
-        }
+//        public static void finalizar(){
+//            int num = Integer.parseInt(JOptionPane.showInputDialog("[1] Para sair \n [2] Menu"));
+//            if (num == 1){
+//                System.exit(0);
+//            } else if(num == 2){
+//                menu();
+//            }
+//        }
       
     public static void main(String[] args) {
-        Banco banco = new Banco();
-        
-        boolean inteiro = true;
-        int menu = 0;
-        
-        while(inteiro){
-            menu = Integer.parseInt(JOptionPane.showInputDialog("BEM VINDO AO BANCO IMATAVELE"
-                    + "\n [1] Criar Conta"
-                    + "\n [2] Selecionar Conta"
-                    + "\n [3] Remover Conta"
-                    + "\n [4] Gerar Relatorio"
-                    + "\n [5] Finalizar"));
-            if ((menu > 0) && (menu <= 5)){
-                inteiro = false;
+        boolean programa = true;
+        while(programa){
+            Banco banco = new Banco();
+
+            boolean inteiro = true;
+            int menu = 0;
+
+            while(inteiro){
+                menu = Integer.parseInt(JOptionPane.showInputDialog("BEM VINDO AO BANCO IMATAVELE"
+                        + "\n [1] Criar Conta"
+                        + "\n [2] Selecionar Conta"
+                        + "\n [3] Remover Conta"
+                        + "\n [4] Gerar Relatorio"
+                        + "\n [5] Finalizar"));
+                if ((menu > 0) && (menu <= 5)){
+                    inteiro = false;
+                }
             }
-        }
+
             switch (menu) {
                 case 1:
                     criarConta(banco);
@@ -121,10 +124,18 @@ public class Testes {
                 case 4:
                     gerarRealatorio(banco);
                     break;
+                case 5:
+                   int num = Integer.parseInt(JOptionPane.showInputDialog("[1] Para sair \n [2] Menu"));
+                    if (num == 1){
+                        System.exit(0);
+                    } else if(num == 2){
+                        menu();
+                    }
+                   break; 
                 default:
                     break;
             }
-            
+        }
         
     }
 }
