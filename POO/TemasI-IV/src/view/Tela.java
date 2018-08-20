@@ -27,36 +27,62 @@ public class Tela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PainelPrincipal = new javax.swing.JPanel();
-        PainelCabecalho = new javax.swing.JPanel();
-        PainelInferior = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        PainelPrincipal.setLayout(new java.awt.BorderLayout());
+        jPanel2.setLayout(new java.awt.GridLayout(3, 1));
 
-        PainelCabecalho.setLayout(new java.awt.GridLayout(2, 1));
-        PainelPrincipal.add(PainelCabecalho, java.awt.BorderLayout.PAGE_START);
+        jPanel3.setLayout(new java.awt.GridBagLayout());
 
-        PainelInferior.setLayout(new java.awt.CardLayout());
+        jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 36)); // NOI18N
+        jLabel1.setText("BANCO IMATAVELE");
+        jPanel3.add(jLabel1, new java.awt.GridBagConstraints());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 765, Short.MAX_VALUE)
+        jPanel2.add(jPanel3);
+
+        jPanel4.setLayout(new java.awt.GridLayout(1, 5));
+
+        jButton1.setText("CRIAR CONTA");
+        jPanel4.add(jButton1);
+
+        jButton3.setText("SELECIONAR CONTA");
+        jPanel4.add(jButton3);
+
+        jButton4.setText("ELIMINAR CONTA");
+        jPanel4.add(jButton4);
+
+        jButton5.setText("GERAR RELATORIO");
+        jPanel4.add(jButton5);
+
+        jButton2.setText("FINALIZAR");
+        jPanel4.add(jButton2);
+
+        jPanel2.add(jPanel4);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 758, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 473, Short.MAX_VALUE)
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 130, Short.MAX_VALUE)
         );
 
-        PainelInferior.add(jPanel1, "card2");
+        jPanel2.add(jPanel5);
 
-        PainelPrincipal.add(PainelInferior, java.awt.BorderLayout.CENTER);
-
-        getContentPane().add(PainelPrincipal, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -97,9 +123,15 @@ public class Tela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel PainelCabecalho;
-    private javax.swing.JPanel PainelInferior;
-    private javax.swing.JPanel PainelPrincipal;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
 }
