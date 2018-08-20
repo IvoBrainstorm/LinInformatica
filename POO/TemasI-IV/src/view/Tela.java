@@ -39,9 +39,12 @@ public class Tela extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(54, 80, 94));
 
+        jPanel2.setForeground(new java.awt.Color(54, 80, 94));
         jPanel2.setLayout(new java.awt.GridLayout(3, 1));
 
+        jPanel3.setForeground(new java.awt.Color(54, 80, 94));
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 36)); // NOI18N
@@ -50,6 +53,7 @@ public class Tela extends javax.swing.JFrame {
 
         jPanel2.add(jPanel3);
 
+        jPanel4.setForeground(new java.awt.Color(54, 80, 94));
         jPanel4.setLayout(new java.awt.GridLayout(1, 5));
 
         jButton1.setText("CRIAR CONTA");
@@ -68,6 +72,8 @@ public class Tela extends javax.swing.JFrame {
         jPanel4.add(jButton2);
 
         jPanel2.add(jPanel4);
+
+        jPanel5.setForeground(new java.awt.Color(54, 80, 94));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
